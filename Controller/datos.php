@@ -3,7 +3,7 @@
 require '../Model/funciones.php';
 $usuario = new usuarios();
 
-@$buscar = 'Refrescos';
+@$buscar = $_POST['txtnombrebuscar'];
 $result = $usuario->buscar_usuario($buscar);
 $tabla_result = $usuario->tabla_usuarios($result);
 

@@ -7,7 +7,8 @@ class usuarios extends BD_PDO{
         $this->Ejecutar_Instruccion("INSERT INTO usuarios (nombre,ap_pat,ap_mat,correo,contraseña) VALUES('$nombre','$ap_pat','$ap_mat','$correo','$contraseña')");
     }
     function buscar_usuario($buscar){
-        $this->Ejecutar_Instruccion("SELECT *FROM usuarios WHERE nombre LIKE '%$buscar%' ORDER BY id DESC");
+        $result = $this->Ejecutar_Instruccion("SELECT *FROM usuarios WHERE nombre LIKE '%$buscar%' ORDER BY id DESC");
+        return $result;
     }
     function tabla_usuarios($result){
         $tabla="";
@@ -21,7 +22,6 @@ class usuarios extends BD_PDO{
             $tabla.='<td>'.$renglon[4].'</td>';
             $tabla.='<td>'.$renglon[5].'</td>';
             $tabla.='<tr>';
-
         }
         return $tabla;
     }

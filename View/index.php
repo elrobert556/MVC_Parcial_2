@@ -15,6 +15,9 @@
             <input type="text" id="txtcorreo" name="txtcorreo" placeholder="Correo electronico">
             <input type="text" id="txtcontraseña" name="txtcontraseña" placeholder="Contraseña">
             <input type="submit" id="btn_registro" name="btn_registro" value="Insertar">
+            <br>
+            <input type="text" name="txtnombrebuscar" id="txtnombrebuscar" placeholder="Ingresa un nombre para buscar...">
+            <input type="submit" value="Buscar">
         </form>
     </div>
     <div>
@@ -30,7 +33,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php echo $tabla_result;?>
+                <?php echo $tabla_result; ?>
             </tbody>
         </table>
     </div>
