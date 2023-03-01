@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Examen Practico</title>
 </head>
 <body>
-    <div>
+    <div class="header">
         <form action="datos.php" method="POST">
-            <input type="text" id="txtnombre" name="txtnombre" placeholder="Nombre(s)">
-            <input type="text" id="txtap_pat" name="txtap_pat" placeholder="Apellido paterno">
-            <input type="text" id="txtap_mat" name="txtap_mat" placeholder="Apellido materno">
-            <input type="text" id="txtcorreo" name="txtcorreo" placeholder="Correo electronico">
-            <input type="text" id="txtcontraseña" name="txtcontraseña" placeholder="Contraseña">
-            <input type="submit" id="btn_registro" name="btn_registro" value="Insertar">
-            <br>
-            <input type="text" name="txtnombrebuscar" id="txtnombrebuscar" placeholder="Ingresa un nombre para buscar...">
-            <input type="submit" value="Buscar">
+            <div class="formulario">
+                <h4>Nombre:</h4>
+                <input class="campo" type="text" id="txtnombre" name="txtnombre" placeholder="Nombre(s)"><br>
+                <h4>Apellido paterno:</h4>
+                <input class="campo" type="text" id="txtap_pat" name="txtap_pat" placeholder="Apellido paterno"><br>
+                <h4>Apellido materno:</h4>
+                <input class="campo" type="text" id="txtap_mat" name="txtap_mat" placeholder="Apellido materno"><br>
+                <h4>Correo:</h4>
+                <input class="campo" type="text" id="txtcorreo" name="txtcorreo" placeholder="Correo electronico"><br>
+                <h4>Contraseña:</h4>
+                <input class="campo" type="text" id="txtcontraseña" name="txtcontraseña" placeholder="Contraseña"><br>
+                <div class="paddinng"><input class="campo btn" type="submit" id="btn_registro" name="btn_registro" value="Insertar"></div>
+            </div>
+            <div class="buscar">
+                <input type="text" name="txtnombrebuscar" id="txtnombrebuscar" placeholder="Ingresa un nombre para buscar...">
+                <input type="submit" value="Buscar">
+            </div>  
+            
         </form>
     </div>
     <div>
