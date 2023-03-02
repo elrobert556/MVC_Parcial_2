@@ -7,21 +7,44 @@
     <link rel="stylesheet" href="../css/styles.css">
     <title>Examen Practico</title>
 </head>
+<script>
+    function eliminar(id)
+             {
+                if (confirm("¿Estas seguro que quieres eliminar el registro?"))
+                {
+                    window.location = "../Controller/datos.php?ideliminar=" + id;
+                }
+             }
+
+             function modificar(id)
+             {
+                window.location = "../Controller/datos.php?idmodificar=" + id;
+             }
+</script>
 <body>
     <div class="header">
         <form action="datos.php" method="POST">
             <div class="formulario">
+            <input type="text" id="txtidproducto" name="txtidproducto" placeholder="Num" value="<?php echo @$buscar_mod[0][0]; ?>" hidden>
                 <h4>Nombre:</h4>
-                <input class="campo" type="text" id="txtnombre" name="txtnombre" placeholder="Nombre(s)"><br>
+                <input class="campo" type="text" id="txtnombre" name="txtnombre" placeholder="Nombre(s)" value="<?php echo @$buscar_mod[0][1]; ?>"><br>
                 <h4>Apellido paterno:</h4>
-                <input class="campo" type="text" id="txtap_pat" name="txtap_pat" placeholder="Apellido paterno"><br>
+                <input class="campo" type="text" id="txtap_pat" name="txtap_pat" placeholder="Apellido paterno" value="<?php echo @$buscar_mod[0][2]; ?>"><br>
                 <h4>Apellido materno:</h4>
-                <input class="campo" type="text" id="txtap_mat" name="txtap_mat" placeholder="Apellido materno"><br>
+                <input class="campo" type="text" id="txtap_mat" name="txtap_mat" placeholder="Apellido materno" value="<?php echo @$buscar_mod[0][3]; ?>"><br>
                 <h4>Correo:</h4>
-                <input class="campo" type="text" id="txtcorreo" name="txtcorreo" placeholder="Correo electronico"><br>
+                <input class="campo" type="text" id="txtcorreo" name="txtcorreo" placeholder="Correo electronico" value="<?php echo @$buscar_mod[0][4]; ?>"><br>
                 <h4>Contraseña:</h4>
-                <input class="campo" type="text" id="txtcontraseña" name="txtcontraseña" placeholder="Contraseña"><br>
-                <div class="paddinng"><input class="campo btn" type="submit" id="btn_registro" name="btn_registro" value="Insertar"></div>
+                <input class="campo" type="text" id="txtcontraseña" name="txtcontraseña" placeholder="Contraseña" value="<?php echo @$buscar_mod[0][5]; ?>"><br>
+                <div class="paddinng"><input class="campo btn" type="submit" id="btn_registro" name="btn_registro" value="<?php 
+                        if(isset($_GET['idmodificar']))
+                        {
+                            echo 'Guardar';
+                        } 
+                        else
+                        { 
+                            echo 'Registrar';
+                        }?>"></div>
             </div>
             <div class="buscar">
                 <input type="text" name="txtnombrebuscar" id="txtnombrebuscar" placeholder="Ingresa un nombre para buscar...">
@@ -40,6 +63,7 @@
                     <td>Apellido materno</td>
                     <td>Correo</td>
                     <td>Contraseña</td>
+                    <td colspan="2" align="center">Accion</td>
                 </tr>
             </thead>
             <tbody>
