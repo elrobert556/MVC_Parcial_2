@@ -46,16 +46,15 @@
                             echo 'Registrar';
                         }?>"></div>
             </div>
-            <div class="buscar">
-                <input type="text" name="txtnombrebuscar" id="txtnombrebuscar" placeholder="Ingresa un nombre para buscar...">
-                <input type="submit" value="Buscar">
-            </div>  
-            
         </form>
     </div>
-    <div>
+    <div class="tabla">
         <form action="datos.php" method="POST">
-            <table border="colspan">
+            <div class="buscar">
+                <input class="campo" type="text" name="txtnombrebuscar" id="txtnombrebuscar" placeholder="Ingresa un nombre para buscar...">
+                <div class="paddinng"><input class="campo btn" type="submit" value="Buscar"></div>
+            </div> 
+            <table border="1">
                 <thead>
                     <tr>
                         <td>ID</td>
@@ -72,7 +71,6 @@
                 </tbody>
             </table>
         </form>
-        
     </div>
 </body>
 </html>
