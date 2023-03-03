@@ -5,13 +5,22 @@ body{
 input{
     border:0;
 }
-form{
+/*form{
     margin: 0 auto;
     width: 300px;
     background-color: white;
     padding: 20px;
     color: #999;
     border-radius: 10px;
+}*/
+.header{
+    margin: 0 auto;
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    color: #999;
+    border-radius: 10px;
+
 }
 .campo{
     margin: 1px;

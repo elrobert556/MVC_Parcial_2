@@ -54,22 +54,25 @@
         </form>
     </div>
     <div>
-        <table border="colspan">
-            <thead>
-                <tr>
-                    <td>ID</td>
-                    <td>Nombre</td>
-                    <td>Apellido paterno</td>
-                    <td>Apellido materno</td>
-                    <td>Correo</td>
-                    <td>Contraseña</td>
-                    <td colspan="2" align="center">Accion</td>
-                </tr>
-            </thead>
-            <tbody>
-                <?php echo $tabla_result; ?>
-            </tbody>
-        </table>
+        <form action="datos.php" method="POST">
+            <table border="colspan">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nombre</td>
+                        <td>Apellido paterno</td>
+                        <td>Apellido materno</td>
+                        <td>Correo</td>
+                        <td>Contraseña</td>
+                        <td colspan="2" align="center">Accion</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php echo $tabla_result; ?>
+                </tbody>
+            </table>
+        </form>
+        
     </div>
 </body>
 </html>
